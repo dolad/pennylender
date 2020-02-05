@@ -147,7 +147,10 @@ class ContactController extends BaseController
         $contact->email=$input['email'];
         $contact->address=$input['address'];
         $contact->save();
+        if($contact->save()){
+            return $this->sendResponse($contact->toArray(), 'Contacts updated successfully');
 
+        }
 
     }
 

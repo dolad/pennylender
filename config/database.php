@@ -15,7 +15,7 @@ return [
     |
     */
 
-    //  'default' => getEnv('DB_CONNECTION', 'pgsql'),
+      'default' => getEnv('DB_CONNECTION', 'pgsql'),
     $DATABASE_URL = parse_url(getenv("DATABASE_URL")),
 
     /*
